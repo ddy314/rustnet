@@ -165,6 +165,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   and PCAPNG export errors spell the format in uppercase
 
 ### Fixed
+- ARM DEB compatibility with Ubuntu 22.04 and Debian 12/13: use a glibc 2.35
+  build baseline, declare runtime dependencies, and embed ARMv7 libpcap to
+  avoid Debian 13's time64 ABI mismatch. Test package installation and capture.
 - **Traffic graph stability**: remove hollow outlines and preserve the scroll position
   across sample arrivals; interpolate before rasterizing to prevent contour wobble
 - Keep Activity summary TX/RX labels, numbers, and units aligned as live rates change
